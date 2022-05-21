@@ -1,8 +1,4 @@
-:root {
-    --navColor: rgb(17, 17, 17);
-    --linkHoverColor: rgb(92, 92, 92);
-    --textColor: white;
-}
+@import "./css/variables.scss";
 
 p,
 a,
@@ -33,7 +29,7 @@ h5,
 h6,
 a {
     margin: 0;
-    color: var(--textColor);
+    color: $textColor;
     font-weight: normal;
 }
 

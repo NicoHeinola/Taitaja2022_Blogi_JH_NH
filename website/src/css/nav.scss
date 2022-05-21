@@ -1,38 +1,40 @@
+@import './variables.scss';
+
 nav {
-    display: flex;
-    flex-direction: column;
-    height: 800px;
-    width: 350px;
-    background: var(--navColor);
-    border-radius: 10px;
-}
+   display: flex;
+   flex-direction: column;
+   height: 800px;
+   width: 350px;
+   background: $navColor;
+   border-radius: 10px;
 
-nav .Header {
-    text-align: center;
-    line-height: 100%;
-    margin: 100px 0;
-}
+   .Header {
+      text-align: center;
+      line-height: 100%;
+      margin: 100px 0;
+   }
 
-nav .Links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-}
+   .Links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+   }
 
-nav .Link {
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 10px;
-    margin: 10px 0;
-    transition: all 0.2s;
-}
+   .Link {
+      width: 200px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 10px 0;
+      transition: all 0.2s;
 
-nav .Link:hover{
-    cursor: pointer;
-    background: var(--linkHoverColor);
+      &::hover {
+         cursor: pointer;
+         background: $linkHoverColor;
+      }
+   }
 }
