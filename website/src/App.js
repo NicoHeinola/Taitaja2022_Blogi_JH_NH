@@ -6,7 +6,7 @@ import './css/nav.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 import { Navigation } from './components/nav';
-import { Content, Test } from './components/content';
+import { Content, TestContent } from './components/content';
 
 const contents = [
   <p>1</p>,
@@ -18,13 +18,17 @@ const App = () => {
 
   const [show, setShow] = useState("1");
 
+  setTimeout(function () {
+    document.getElementById("app").className = "App";
+  }, 550);
+
   return (
-    <div className="App">
+    <div id='app' className="App preload">
       <div className='AnimatedBG'>
         <img className='Image' src='./images/background.jpg'></img>
       </div>
       <Navigation setContent={setShow}></Navigation>
-      <Content elements={contents} ids={["1","2","3"]} show={show}></Content>
+      <Content elements={contents} ids={["1", "2", "3"]} show={show}></Content>
     </div>
   )
 };

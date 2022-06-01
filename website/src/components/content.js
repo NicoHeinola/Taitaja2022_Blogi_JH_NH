@@ -16,7 +16,7 @@ const SubContent = ({ e, show }) => {
     </div>
 }
 
-const Test = () => {
+const TestContent = () => {
     return (
         <div>
             awoeuawoeh
@@ -24,4 +24,4 @@ const Test = () => {
     )
 }
 
-export { Content, Test }
+export { Content, TestContent }
