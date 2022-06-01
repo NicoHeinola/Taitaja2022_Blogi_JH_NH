@@ -6,7 +6,6 @@
     width: 1100px;
     height: 100%;
     margin: auto;
-    border: 1px solid black ;
     overflow: hidden;
 }
 
@@ -16,7 +15,6 @@
     height: 580px;
     top: 50%;
     transform: translateY(-50%);
-    border: 1px solid green;
 
     animation-duration: 0.5s;
     animation-timing-function: cubic-bezier();
