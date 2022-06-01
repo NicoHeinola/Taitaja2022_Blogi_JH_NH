@@ -6,17 +6,28 @@ import './css/nav.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 import { Navigation } from './components/nav';
-import { Content } from './components/content';
+import { Content, Test } from './components/content';
 
-const App = () => (
-  <div className="App">
-    <div className='AnimatedBG'>
-      <img className='Image' src='./images/background.jpg'></img>
+const contents = [
+  <p>1</p>,
+  <p>2</p>,
+  <p>3</p>
+]
+
+const App = () => {
+
+  const [show, setShow] = useState("1");
+
+  return (
+    <div className="App">
+      <div className='AnimatedBG'>
+        <img className='Image' src='./images/background.jpg'></img>
+      </div>
+      <Navigation setContent={setShow}></Navigation>
+      <Content elements={contents} ids={["1","2","3"]} show={show}></Content>
     </div>
-    <Navigation></Navigation>
-    <Content></Content>
-  </div>
-);
+  )
+};
 
 
 export default App;
